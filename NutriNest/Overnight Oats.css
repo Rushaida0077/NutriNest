@@ -1,0 +1,551 @@
+/* Resetting margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+  width: 150px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  font-size: 16px;
+}
+
+.logo img {
+  height: 60px;
+  margin-top: -25px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  padding: 10px 20px;
+  background: #fdece3;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  background: #f7d7c4;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Menu (Hidden on Larger Screens) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: black;
+}
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.content {
+  max-width: 50%;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+.description {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #666;
+}
+
+.time-info {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.time-info li {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.time-info .icon {
+  margin-right: 8px;
+}
+
+/* Image section styles */
+.image-section {
+  max-width: 45%;
+  background-color: #fdece3; /* Light peach background */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* New content section styling */
+.section-title {
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 30px;
+  color: #333;
+}
+
+.recipe-overview,
+.ingredients,
+.ratio-explanation {
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.overview-list,
+.ingredients-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.overview-list li,
+.ingredients-list li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid #e0e0e0;
+  margin: 20px 0;
+}
+
+/* Ratio explanation paragraph */
+.ratio-text {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Section Title Styling */
+.section-title {
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Divider Styling */
+.divider {
+  border: none;
+  border-top: 2px solid #e0e0e0;
+  margin: 10x 0;
+}
+
+/* Base Recipe Section Styling */
+.base-recipe {
+  padding: 20px;
+}
+
+.instruction-steps {
+  list-style-type: decimal;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.instruction-steps li {
+  margin-bottom: 10px;
+}
+
+/* Recipe Ideas Section Styling */
+.recipe-ideas {
+  padding: 20px;
+}
+
+.intro-text {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.recipe-cards {
+  display: grid;  /* Use grid layout */
+  grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+  gap: 20px;  /* Space between cards */
+  padding: 20px 0;
+}
+
+.card {
+  background-color: #fdece3;  /* Light peach background for cards */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.3s ease;  /* Smooth hover effect */
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.recipe-name {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.recipe-description {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+/* Hover effect for the cards */
+.card:hover {
+  transform: scale(1.05);  /* Slightly enlarge the card */
+}
+
+/* Recommended Dishes Section Styling */
+.recommended-dishes {
+  padding: 20px;
+}
+
+/* Recommended Dishes Section Styling */
+.dishes {
+  display: flex;
+  justify-content: left; /* Distribute space between dishes */
+  gap: 7px; /* Small gap between dishes */
+  flex-wrap: wrap; /* Allows wrapping if the screen is too small */
+  margin-top: 20px;
+}
+
+.dish {
+  text-align: center;
+  width: 22%; /* Adjust width as necessary for spacing */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Square images with rounded edges */
+.dish img {
+  width: 70%; /* Ensure image fills the entire width of the dish container */
+  height: 80%; /* Make the height equal to the width for a square shape */
+  object-fit: cover; /* Ensure the image covers the square area without distortion */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+
+/* Hover Effect for the Dishes */
+.dish:hover {
+  transform: scale(1.0); /* Slightly enlarge the dish on hover */
+}
+
+/* Hover Effect for the Images */
+.dish img:hover {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+/* Feedback Form Section Styling */
+.feedback-form {
+  padding: 20px;
+}
+
+/* Form Field Styling */
+.feedback-form input, .feedback-form textarea {
+  width: 60%; /* Adjust width to make the form fields smaller */
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Placeholder Text Styling (light gray) */
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+  color: #a0a0a0; /* Light gray color for placeholder text */
+  font-style: italic; /* Optional: makes the placeholder text italic */
+}
+
+/* Button Styling */
+.feedback-form button {
+    display: block; /* Makes the button a block element */
+    margin: 20px auto; /* Centers the button horizontally */
+    padding: 10px 20px;
+    background-color: #f8c8d3;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto; /* Keeps the button size according to its content */
+}
+
+.feedback-form button:hover {
+  background-color: #fdece3;
+}
+
+/* Footer */
+.footer {
+  background-color: #fdece3;
+  padding: 40px 20px;
+  color: #333;
+  width: 100%;
+  margin-top: auto;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1700px;
+  margin: 0 auto;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.footer-logo {
+  flex: 1;
+}
+
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  margin-right: 10px;
+  color: #333;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #f77b54;
+}
+
+.footer-links {
+  flex: 1;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f77b54;
+}
+
+.footer-contact {
+  flex: 2;
+}
+
+.footer-contact h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-contact p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.footer-contact a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #f77b54;
+}
+
+
+@media screen and (max-width: 768px) {
+ /* Navbar: Center logo and show hamburger menu */
+ .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+/* Center Logo */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Show Hamburger Menu */
+.menu-toggle {
+  display: flex;
+}
+
+/* Hide Full Nav Links by Default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+  background: #fff;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Show Nav Links when active */
+.nav-links.active {
+  display: flex;
+}
+/* Recipe Cards for Smaller Screens */
+
+.recipe-cards {
+  grid-template-columns: repeat(3, 1fr);  /* Maintain 3 columns */
+}
+
+.card {
+  width: 100%;  /* Ensure cards take full width within grid column */
+  min-width: 200px;  /* Set a min width */
+  max-width: 250px;  /* Set a max width */
+}
+
+/* Search bar adjustments */
+.search-container {
+  display: flex;
+  align-items: center;
+  order: 2;
+  margin-right: 10px; /* Adjust if needed */
+}
+
+.search-input {
+  display: none; /* Hide search input */
+}
+
+.search-btn {
+  display: block; /* Keep the search icon visible */
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Footer adjustments */
+.footer-container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo,
+.footer-links,
+.footer-contact {
+  margin-bottom: 20px;
+}
+}
