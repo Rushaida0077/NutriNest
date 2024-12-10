@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NutriNest</title>
+  <title>Overnight Oats</title>
   <link rel="stylesheet" href="Overnight Oats.css">
 </head>
 <body>
@@ -19,10 +19,10 @@
       </div>
       
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="recipes.html">Recipes</a></li>
         <li><a href="mealplan.html">Meal Plan</a></li>
-        <li><a href="#">Sign in</a></li>
+        <li><a href="#" class="signin-popup">Sign in</a></li>
       </ul>
     
       <div class="search-container">
@@ -33,6 +33,73 @@
       </div>
     </nav>
   </header>
+  <section class="signin-body"> 
+    <div class="wrapper">
+       <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+      <div class="form-box login">
+        <h2>Sign in</h2>
+        <form action="#">
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" required>
+            <label>Email</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock"></ion-icon></span>
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox"> Remember me</label>
+          </div>
+          <button type="submit" class="btn1">Sign in</button>
+
+          <div class="Sign_up">
+            <p>Don't have an account?<a href="#" class="signup-link">Sign up</a></p>
+
+          </div>
+
+        </form>
+      </div>
+
+      <div class="form-box sign_up">
+        <h2>Sign Up</h2>
+        <form action="#">
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+            <input type="text" required>
+            <label>Username</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" required>
+            <label>Email</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock"></ion-icon></span>
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox">I agree to the terms and conditions</label>
+          </div>
+          <button type="submit" class="btn1">Sign up</button>
+
+          <div class="Sign_up">
+          <p>Already have an account?<a href="#" class="signin-link">Sign in</a></p>
+
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
 
   
 <div class="container">
@@ -199,6 +266,7 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <script src="all.js"></script>
 </body>
 </html>
