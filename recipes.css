@@ -227,6 +227,7 @@ a {
 
 .footer {
     background-color: #fdece3;
+    padding: 40px 20px;
     color: #333;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -240,6 +241,7 @@ a {
     gap: 20px;
     flex-wrap: wrap;
 }
+
 
 .footer-logo {
     flex: 1;
