@@ -568,6 +568,10 @@ body {
         display: flex;
     }
 
+    .search-input {
+        width: 90px; 
+    }
+
     .s1 h1 {
         font-size: 40px;
     }
