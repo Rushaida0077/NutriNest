@@ -660,5 +660,162 @@ body {
 
 
 }
+@media screen and (max-width: 360px) {
+    .navbar {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        margin: 10px 0; 
+        position: static;
+        transform: none;
+    }
+
+    .menu-toggle {
+        display: flex; 
+        position: absolute;
+        top: 15px;
+        left: 10px;
+    }
+
+    .search-container {
+        width: 90%; 
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .search-input {
+        width: 80%;
+        font-size: 12px;
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        align-items: center;
+        background: #fff1e7;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex; 
+    }
+
+    .nav-links a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+
+
+    .s1 h1 {
+        font-size: 40px;
+    }
+    .N0{
+        margin-right: none;
+        margin-left:50px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .d{
+        font-size: 15px;
+        font-weight: 400px;
+    }
+    .N1 p{
+        margin-top:none;
+        font-size:9px;
+        line-height: 16px;
+    }
+    .N2 img
+    {
+        width:120px;
+        height:175px;
+    }
+    
+    
+    .btn {
+    padding: 10px 10px; 
+    font-size: 12px;    
+    }
+
+   
+    .s2{
+        width: 90%;
+        
+    }
+
+    .p1 img{
+        width: 120px;
+        height: 120px;
+    }
+    .t1 {
+        font-size: 14px; 
+        line-height: 21px;
+    }
+    .t2, .t3 {
+        font-size: 7px;
+        line-height: 15px;
+    }
+    .s3 h1{
+        font-size: 35px; 
+    }
+
+    .boss {
+        flex-direction: column;
+        align-items: center;
+    }
+    .R {
+        margin-bottom: 20px;
+    }
+    .s4 {
+        padding: 10px 20px;
+    }
+    .s4 h1, .s4 h2 {
+        font-size: 32px;
+    }
+    .DR {
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+    }
+    .DRL {
+        width: 75%;
+        
+    }
+    .DRL:active {
+        transform: scale(1.05);
+        border-color: #A73030;
+    }
+
+    .test img {
+        width: 80px;
+        height: 80px;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-links,
+    .footer-contact {
+        margin-bottom: 20px;
+    }
+
+
+
+}
 
 
