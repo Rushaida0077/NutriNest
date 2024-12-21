@@ -531,6 +531,32 @@ body {
     
     text-decoration:underline;
 }
+.btn-google {
+    width: 100%;
+    height: 45px;
+    background: #fff; /* White background */
+    border: 1px solid #000; /* Google Red border */
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000; /* Google Red text */
+    font-family: "Marcellus", serif;
+    font-weight: 500;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.btn-google:hover {
+    background: #b4adad; 
+}
+
+.btn-google ion-icon {
+    font-size: 1.2em; 
+    color: #000; 
+}
    
 @media screen and (max-width: 768px) {
     .navbar {
