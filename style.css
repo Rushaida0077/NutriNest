@@ -199,12 +199,12 @@ body {
     width: 180px;
     height:210px;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease
     
 }
 .R img:hover{
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 .R p{
     font-size: 21px;
@@ -234,6 +234,7 @@ body {
     padding-left:30px;
     padding-top:20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     
 }
 .DRL img{
@@ -248,11 +249,12 @@ body {
     color: #160303;
 }
 .DRL:hover {
-    transform: scale(1.05); 
+   
     border-color: #A73030; 
+    transform: translateY(3px);
 }
 .DRL:active {
-    transform: scale(1.05);
+    
     border-color: #A73030;
 }
 
@@ -514,6 +516,11 @@ body {
     color: #ffff;
     font-family:"Marcellus", serif; ;
     font-weight: 500;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.btn1:hover{
+    background:#6a0505;
+    transform: translateY(-2px);
 }
 .Sign_up{
     font-size:.9em;
@@ -535,7 +542,7 @@ body {
     width: 100%;
     height: 45px;
     background: #fff; /* White background */
-    border: 1px solid #000; /* Google Red border */
+    border: 1px solid #545454; /* Google Red border */
     border-radius: 15px;
     cursor: pointer;
     font-size: 1em;
@@ -546,18 +553,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; 
+    gap: 10px; /* Space between icon and text */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .btn-google:hover {
-    background: #b4adad; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transform: translateY(-2px); /* Optional: slight lift effect */
+   
 }
 
 .btn-google ion-icon {
     font-size: 1.2em; 
     color: #000; 
 }
-   
+.massageDiv{
+    background-color: hsl(0, 98%, 19%);
+    color:rgb(18, 2, 2);
+    padding: 10px, 20px;
+    margin:10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity:0;
+    animation: fadeout 7s forwards;
+
+}
+
 @media screen and (max-width: 768px) {
     .navbar {
         display: flex;
@@ -593,7 +614,6 @@ body {
     .nav-links.active {
         display: flex;
     }
-
     .search-input {
         width: 90px; 
     }
@@ -609,12 +629,12 @@ body {
         align-items: center;
     }
     .d{
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 400px;
     }
     .N1 p{
         margin-top:none;
-        font-size:12px;
+        font-size:9px;
         line-height: 16px;
     }
     .N2 img
@@ -636,8 +656,8 @@ body {
     }
 
     .p1 img{
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
     .t1 {
         font-size: 18px; 
@@ -682,10 +702,22 @@ body {
         width: 80px;
         height: 80px;
     }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-links,
+    .footer-contact {
+        margin-bottom: 20px;
+    }
 
 
 
 }
+   
 @media screen and (max-width: 360px) {
     .navbar {
         flex-direction: column; 
