@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="firebaseauth.js"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -38,6 +39,7 @@
       <div class="form-box login">
         <h2>Sign in</h2>
         <form action="#">
+          <div id="signInMessage" class="massageDiv" style="display:none;"></div>
 
           <div class="input-box">
             <span class="icon"><ion-icon name="mail"></ion-icon></span>
@@ -53,9 +55,9 @@
           <div class="remember-forgot">
             <label><input type="checkbox"> Remember me</label>
           </div>
-          <button type="submit" class="btn1">Sign in</button>
+          <button type="submit" class="btn1" id="submitSignIn">Sign in</button>
 
-          <button type="button" class="btn-google">
+          <button type="button" class="btn-google" id="googleSignIn">
             <ion-icon name="logo-google"></ion-icon> Sign in with Google
           </button>
 
@@ -70,29 +72,30 @@
       <div class="form-box sign_up">
         <h2>Sign Up</h2>
         <form action="#">
+          <div id="signUpMessage" class="massageDiv" style="display:none"></div>
 
           <div class="input-box">
             <span class="icon"><ion-icon name="person"></ion-icon></span>
-            <input type="text" id="name" required>
+            <input type="text" id="Name" required>
             <label>Username</label>
           </div>
 
           <div class="input-box">
             <span class="icon"><ion-icon name="mail"></ion-icon></span>
-            <input type="email" id="emailr" required>
+            <input type="email" id="rEmail" required>
             <label>Email</label>
           </div>
 
           <div class="input-box">
             <span class="icon"><ion-icon name="lock"></ion-icon></span>
-            <input type="password" id=passwordr required>
+            <input type="password" id=rPassword required>
             <label>Password</label>
           </div>
           <div class="remember-forgot">
             <label><input type="checkbox">I agree to the terms and conditions</label>
           </div>
-          <button type="submit" class="btn1">Sign up</button>
-          <button type="button" class="btn-google">
+          <button type="submit" class="btn1" id="submitSignUp">Sign up</button>
+          <button type="button" class="btn-google" id="googleSignUp">
             <ion-icon name="logo-google"></ion-icon> Sign up with Google
           </button>
           <div class="Sign_up">
@@ -107,7 +110,7 @@
   </section>  
 
 
-    <section class="s1">
+  <section class="s1">
      <h1>TASTE THE GOODNESS</h1>
      <div class="N0">
       <div class="N1">
@@ -119,9 +122,9 @@
         <img src="images1/image 3.png">
       </div>
      </div>
-    </section>
+  </section>
 
-    <section class="s2">
+  <section class="s2">
       <div class="p1">
         <img src="images1/image 10.png">
       </div>
@@ -131,9 +134,9 @@
         <p class="t3">Your goals, your meals—made easy.<br>Start exploring our curated recipes and personalized<br>meal plans today!</p>
         <button class="btn"><a href="recipes.html" class="btn">Browse Recipes</a></button>
       </div>
-    </section>
+  </section>
 
-    <section class="s3">
+  <section class="s3">
       <h1>Recipes Collection</h1>
       <div class="boss">
 
@@ -164,9 +167,9 @@
 
       
       </div>
-    </section>
+  </section>
 
-    <section class="s4">
+  <section class="s4">
       <h1>Diverse Recipe Library</h1>
       <div class="DR">
         <div class="DRL">
@@ -198,10 +201,10 @@
         <img src="images1/image.png">
         <p>NutriNest has completely transformed my meal prep routine! The easy<br>-to-use platform, diverse recipes, and personalized meal planning tool<br> save me so much time while helping me stay on track with my health<br> goals. Highly recommend it to anyone looking for a simple, effective way<br> to eat healthier!</p>
        </div>
-    </section>
+  </section>
 
  
-    <footer class="footer">
+  <footer class="footer">
       <div class="footer-container">
         <!-- Logo and Social Media Section -->
         <div class="footer-logo">
@@ -234,11 +237,12 @@
           <p><i class="fas fa-phone"></i> <a href="tel:+8801831750514">+880 1831 750514</a></p>
         </div>
       </div>
-    </footer>
+   </footer>
     
     <script src="all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
     
 </body>
 </html>
