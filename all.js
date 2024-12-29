@@ -100,45 +100,56 @@ document.getElementById('ingredient-search').addEventListener('input', filterRec
 
 
 
-document.querySelector('.search-btn').addEventListener('click', async function () {
-  const query = document.querySelector('.search-input').value.trim();
-  if (query) {
-      try {
-          const apiKey = 'b3ff25fc71df4c6eb47b4a28fb39b233'; // Use your actual API key here
-          const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${encodeURIComponent(query)}&apiKey=${apiKey}`);
-          const data = await response.json();
-          
-          if (data.results && data.results.length > 0) {
-              updateRecipesGrid(data.results); // Use "results" instead of "hits" based on Spoonacular's API response structure
-          } else {
-              alert('No recipes found for your search.');
-          }
-      } catch (error) {
-          console.error('Error fetching recipes:', error);
-          alert('Something went wrong while fetching recipes.');
-      }
-  } else {
-      alert('Please enter a search query.');
-  }
+// Add event listener to the search button
+document.querySelector('.search-btn').addEventListener('click', handleSearch);
+
+// Add event listener to trigger search on "Enter" key press
+document.querySelector('.search-input').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        handleSearch();
+    }
 });
 
+// Define the search function
+async function handleSearch() {
+    const query = document.querySelector('.search-input').value.trim();
+    if (query) {
+        try {
+            const apiKey = 'b3ff25fc71df4c6eb47b4a28fb39b233'; // Use your actual API key here
+            const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${encodeURIComponent(query)}&apiKey=${apiKey}`);
+            const data = await response.json();
+            
+            if (data.results && data.results.length > 0) {
+                updateRecipesGrid(data.results); // Use "results" instead of "hits" based on Spoonacular's API response structure
+            } else {
+                alert('No recipes found for your search.');
+            }
+        } catch (error) {
+            console.error('Error fetching recipes:', error);
+            alert('Something went wrong while fetching recipes.');
+        }
+    } else {
+        alert('Please enter a search query.');
+    }
+}
 
+// Function to update the recipes grid
 function updateRecipesGrid(recipes) {
-  const recipesGrid = document.querySelector('.recipes-grid');
-  recipesGrid.innerHTML = ''; 
+    const recipesGrid = document.querySelector('.recipes-grid');
+    recipesGrid.innerHTML = ''; 
 
-  recipes.forEach((recipeData) => {
-      const recipe = recipeData;
+    recipes.forEach((recipeData) => {
+        const recipe = recipeData;
 
-      const recipeCard = document.createElement('div');
-      recipeCard.classList.add('recipe-card');
-      recipeCard.innerHTML = `
-          <a href="https://spoonacular.com/recipes/${recipe.title.replace(/\s+/g, '-').toLowerCase()}-${recipe.id}" target="_blank">
-              <img src="${recipe.image}" alt="${recipe.title}">
-              <h3>${recipe.title}</h3>
-              <p class="nutrition">Calories: ${Math.round(recipe.calories)}</p>
-          </a>
-      `;
-      recipesGrid.appendChild(recipeCard);
-  });
+        const recipeCard = document.createElement('div');
+        recipeCard.classList.add('recipe-card');
+        recipeCard.innerHTML = `
+            <a href="https://spoonacular.com/recipes/${recipe.title.replace(/\s+/g, '-').toLowerCase()}-${recipe.id}" target="_blank">
+                <img src="${recipe.image}" alt="${recipe.title}">
+                <h3>${recipe.title}</h3>
+                <p class="nutrition">Calories: ${Math.round(recipe.calories)}</p>
+            </a>
+        `;
+        recipesGrid.appendChild(recipeCard);
+    });
 }
