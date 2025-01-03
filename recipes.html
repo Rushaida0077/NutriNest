@@ -34,28 +34,33 @@
     </nav>
   </header>
 
- <section class="signin-body"> 
+  <section class="signin-body"> 
     <div class="wrapper">
        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
       <div class="form-box login">
         <h2>Sign in</h2>
         <form action="#">
+          <div id="signInMessage" class="massageDiv" style="display:none;"></div>
 
           <div class="input-box">
             <span class="icon"><ion-icon name="mail"></ion-icon></span>
-            <input type="email" required>
+            <input type="email" id="email" required>
             <label>Email</label>
           </div>
 
           <div class="input-box">
             <span class="icon"><ion-icon name="lock"></ion-icon></span>
-            <input type="password" required>
+            <input type="password" id="password" required>
             <label>Password</label>
           </div>
           <div class="remember-forgot">
             <label><input type="checkbox"> Remember me</label>
           </div>
-          <button type="submit" class="btn1">Sign in</button>
+          <button type="submit" class="btn1" id="submitSignIn">Sign in</button>
+
+          <button type="button" class="btn-google" id="googleSignIn">
+            <ion-icon name="logo-google"></ion-icon> Sign in with Google
+          </button>
 
           <div class="Sign_up">
             <p>Don't have an account?<a href="#" class="signup-link">Sign up</a></p>
@@ -68,29 +73,32 @@
       <div class="form-box sign_up">
         <h2>Sign Up</h2>
         <form action="#">
+          <div id="signUpMessage" class="massageDiv" style="display:none"></div>
 
           <div class="input-box">
             <span class="icon"><ion-icon name="person"></ion-icon></span>
-            <input type="text" required>
+            <input type="text" id="Name" required>
             <label>Username</label>
           </div>
 
           <div class="input-box">
             <span class="icon"><ion-icon name="mail"></ion-icon></span>
-            <input type="email" required>
+            <input type="email" id="rEmail" required>
             <label>Email</label>
           </div>
 
           <div class="input-box">
             <span class="icon"><ion-icon name="lock"></ion-icon></span>
-            <input type="password" required>
+            <input type="password" id=rPassword required>
             <label>Password</label>
           </div>
           <div class="remember-forgot">
             <label><input type="checkbox">I agree to the terms and conditions</label>
           </div>
-          <button type="submit" class="btn1">Sign up</button>
-
+          <button type="submit" class="btn1" id="submitSignUp">Sign up</button>
+          <button type="button" class="btn-google" id="googleSignUp">
+            <ion-icon name="logo-google"></ion-icon> Sign up with Google
+          </button>
           <div class="Sign_up">
             <p>Already have an account?<a href="#" class="signin-link">Sign in</a></p>
 
@@ -100,7 +108,8 @@
       </div>
 
     </div>
- </section>
+  </section>  
+
 
   <div class="container">
     <div class="filter-toggle-container">
@@ -130,36 +139,66 @@
 
     <div class="recipes-grid">
       <div class="recipe-card" data-diet=" Vegan Vegetarian Gluten-Free Lactose-free" data-meal-type="breakfast">
+        <button class="save">
+          <span class="icon">
+            <ion-icon name="bookmark"></ion-icon>
+      </span>
+      </button>
         <a href="Overnight Oats.html">
           <img src="images/Overnight Oats.png" alt="Overnight Oats">
           <h3>Overnight Oats</h3>
           <p>A creamy, customizable breakfast made by soaking oats overnight with milk, fruits, and toppings.</p>
           <p class="nutrition">Calories: 360 | Carbs: 47g | Protein: 31g | Fats: 6g</p>
         </a>
+        <button class="view-recipe-btn" data-recipe-id="12345" data-title="Delicious Recipe"> View Recipe</button>
       </div>
       <div class="recipe-card" data-diet="Vegetarian Gluten-Free Lactose-free" data-meal-type="breakfast">
+        <button class="save">
+          <span class="icon">
+            <ion-icon name="bookmark"></ion-icon>
+      </span>
+      </button>
           <img src="images/Avocado Sandwich.png" alt="Avocado toast with eggs">
           <h3>Avocado toast with eggs</h3>
           <p>Nutritious crispy toast with creamy avocado and perfectly cooked eggs.</p>
           <p class="nutrition">Calories: 260 | Carbs: 20g | Protein: 12g | Fats: 16g</p>
+          <button class="view-recipe-btn" data-recipe-id="12345" data-title="Delicious Recipe"> View Recipe</button>
       </div>
       <div class="recipe-card" data-diet="Vegetarian Gluten-free Lactose-free" data-meal-type="lunch Dinner" >
+        <button class="save">
+          <span class="icon">
+            <ion-icon name="bookmark"></ion-icon>
+      </span>
+      </button>
           <img src="images/Vegetable Frittata.png" alt="Vegetable Frittata">
           <h3>Vegetable Frittata</h3>
           <p>A savory vegetable frittata, packed with colorful veggies and a fluffy, egg-based texture.</p>
           <p class="nutrition">Calories: 190 | Carbs: 3g | Protein: 4g | Fats: 9g</p>
+          <button class="view-recipe-btn" data-recipe-id="12345" data-title="Delicious Recipe"> View Recipe</button>
       </div>
       <div class="recipe-card" data-diet="Vegan Vegetarian Gluten-free Lactose-free" data-meal-type="Snacks">
+        <button class="save">
+          <span class="icon">
+            <ion-icon name="bookmark"></ion-icon>
+      </span>
+      </button>
           <img src="images/Hummus.png" alt="Hummus">
           <h3>Hummus</h3>
           <p>A delicious creamy, healthy dip made from blended chickpeas, tahini, olive oil, and spices.</p>
           <p class="nutrition">Calories: 25 | Carbs: 2.1g | Protein: 1.2g | Fats: 1.4g</p>
+          <button class="view-recipe-btn" data-recipe-id="12345" data-title="Delicious Recipe"> View Recipe</button>
       </div>
       <div class="recipe-card" data-diet="vegan Vegetarian Gluten-free Lactose-free" data-meal-type="Snacks">
+        <button class="save">
+          <span class="icon">
+            <ion-icon name="bookmark"></ion-icon>
+      </span>
+      </button>
           <img src="images/Cranberry Salsa.png" alt="Cranberry Salsa">
           <h3>Cranberry Salsa</h3>
           <p>A healthy, vibrant, tangy dish made with fresh cranberries, citrusy orange and lime, spicy jalapeños, and refreshing cilantro.</p>
           <p class="nutrition">Calories: 28 | Carbs: 7g | Protein: 0.1g | Fats: 0.1g</p>
+          <button class="view-recipe-btn" data-recipe-id="12345" data-title="Delicious Recipe"> View Recipe</button>
       </div>
     </div>
   </div>
@@ -194,10 +233,11 @@
     </div>
   </footer>
 
-  <script src="all.js"></script>
+  <script src="all.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"></script>
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
+</head>
+   
  
 </body>
 </html>
