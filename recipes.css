@@ -175,6 +175,20 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 32px; /* Larger size for the icon */
+    color: white; /* Neutral color */
+    border-color:#000;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+.icon:hover{
+    color: rgb(0, 0, 0);
+}
 
 .recipe-card:hover {
     transform: translateY(-8px);
@@ -229,19 +243,21 @@ a {
     background-color: #fdece3;
     padding: 40px 20px;
     color: #333;
+    width: 100%;
+    margin-top: auto;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .footer-container {
-    width:80%;
-    margin:auto;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    max-width: 1700px;
+    margin: 0 auto;
     gap: 20px;
     flex-wrap: wrap;
+    padding: 40px;
 }
-
 
 .footer-logo {
     flex: 1;
@@ -449,6 +465,11 @@ a {
     color: #ffff;
     font-family:"Marcellus", serif; ;
     font-weight: 500;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.btn1:hover{
+    background:#6a0505;
+    transform: translateY(-2px);
 }
 .Sign_up{
     font-size:.9em;
@@ -465,10 +486,69 @@ a {
 .Sign_up p a:hover{
     
     text-decoration:underline;
+}
+.btn-google {
+    width: 100%;
+    height: 45px;
+    background: #fff; /* White background */
+    border: 1px solid #545454; /* Google Red border */
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000; /* Google Red text */
+    font-family: "Marcellus", serif;
+    font-weight: 500;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between icon and text */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn-google:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transform: translateY(-2px); /* Optional: slight lift effect */
    
 }
 
+.btn-google ion-icon {
+    font-size: 1.2em; 
+    color: #000; 
+}
+.massageDiv{
+    background-color: hsl(0, 98%, 19%);
+    color:rgb(18, 2, 2);
+    padding: 10px, 20px;
+    margin:10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity:0;
+    animation: fadeout 7s forwards;
 
+}
+
+
+  .view-recipe-btn{
+   
+    margin-top:10px;
+    height: 43px;
+    width:100%;
+    background:#a43131; 
+    border: none;
+    border-radius: 10px;
+    cursor:pointer;
+    font-size:14px;
+    color: #fafafa;
+    font-family:"Marcellus", serif; ;
+    font-weight: 500;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.view-recipe-btn:hover{
+    background:#6a0505;
+  
+}  
+  
 @media screen and (max-width: 768px) {
     .navbar {
         display: flex;
@@ -532,28 +612,9 @@ a {
         gap: 15px;
     }
 
-    .search-container {
-        display: flex;
-        align-items: center;
-        order: 2;
-        margin-right: 10px; 
-    }
-
     .search-input {
-        display: none; 
+        width: 100px; 
     }
-
-    .search-btn {
-        display: block; 
-        font-size: 20px;
-        cursor: pointer;
-    }
-    
-    .search-btn {
-        position: relative;
-        right: 10px; 
-    }
-
     .footer-container {
         flex-direction: column;
         align-items: center;
