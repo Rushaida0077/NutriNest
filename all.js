@@ -378,7 +378,7 @@ document.querySelectorAll('.save').forEach(button => {
   });
 });
 
-document.querySelectorAll('.submit').forEach(button => {
+document.querySelectorAll('.submit1').forEach(button => {
   button.addEventListener('click', async function (e) {
     e.preventDefault();
 
